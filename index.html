@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #body {
+            background-color: black;
+        }
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        
+        
+    </style>
+</head>
+<body id="body">
+     
+
+    <div>
+        <p id="resp">
+        
+        </p>
+        
+        <button id="acender">acender</button>
+        <button onclick="apagar()">apagar</button>
+    </div>
+        
+    <script>
+        
+        document.getElementById('resp').innerHTML = '<img  src="apagada.png">'
+        let acender = document.getElementById('acender')
+        acender.addEventListener('click', () => {
+            document.getElementById('resp').innerHTML = '<img id="img" src="acesa.png">'
+            document.getElementById('body').style.backgroundColor = '#fdd947'
+        }) 
+
+        function apagar() {
+            document.getElementById('resp').innerHTML = '<img  src="apagada.png">'
+            document.getElementById('body').style.backgroundColor = ''
+        }
+        
+    </script>
+</body>
+</html>
